@@ -1,0 +1,151 @@
+.answer-container {
+    display: flex;
+    flex-direction: column; /* APILA */
+    align-items: center; /* CENTRA EN EJE X */
+    justify-content: center; /* CENTRA EN EJE Y */
+    height: 40vh; /* toda la pantalla */
+    gap: 3rem; /* separación entre los botones */
+  }
+  
+  @media (max-width: 770px) {
+    .answer-container {
+      flex-direction: row;
+      align-items: center; /* CENTRA EN EJE X */
+      height: 20vh; /* toda la pantalla */
+
+    }
+  }
+  @media (max-width: 320px) {
+    .answer-container {
+      flex-direction: column;
+      align-items: center; /* CENTRA EN EJE X */
+    }
+  }
+  .answer-container a {
+    display: block; /* hace que cada Link ocupe todo el ancho que necesita */
+    width: 100%; /* opcional: si querés que ocupen todo el ancho disponible */
+    text-align: center;
+  }
+  .button-answer {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    border: 2.7px solid white;
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* brillo suave blanco */
+    transition:
+      color 0.5s ease,
+      border-color 0.5s ease,
+      box-shadow 0.5s ease; /* incluimos el brillo en el efecto */
+  }
+  
+  
+  .button-answer:hover {
+    animation: heartbeat 6s infinite;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.15);
+    }
+    50% {
+      transform: scale(1.076);
+    }
+    70% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+   
+.loader {
+  width: 5rem;
+  aspect-ratio: 1;
+  display: grid;
+}
+.loader::before,
+.loader::after {    
+  content:"";
+  grid-area: 1/1;
+  --c:no-repeat radial-gradient(farthest-side,#c5c5c5 92%,#0000);
+  background: 
+    var(--c) 50%  0, 
+    var(--c) 50%  100%, 
+    var(--c) 100% 50%, 
+    var(--c) 0    50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes l12 { 
+  100%{transform: rotate(.5turn)}
+}
+
+.text-answer-title {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  line-height: 3.2rem;
+  font-size: 3.2rem;
+
+}
+
+.input-name {
+  width: 50%;
+  height: 2rem;
+  border-radius: 1.5rem;
+  background-color: transparent;
+  color: white;
+  border: 2.7px solid white;
+  font-size: 0.8rem;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* brillo suave blanco */
+}
+
+.nombre-Name {
+  margin: 0.1rem auto; /* auto en los costados centra horizontalmente */
+  display: block;      /* asegura que se comporte como bloque centrable */
+  max-width: 80%;
+  line-height: 1.2;
+  font-size: 4.2em;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  position: relative;
+width: 25rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  background: radial-gradient(
+    circle,
+    rgba(227, 227, 227, 0.69) 10%,
+    rgba(238, 238, 238, 0.892) 50%,
+    rgba(193, 193, 193, 0.819) 70%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  filter: drop-shadow(20px 20px 100px rgba(255, 255, 255, 0.4));
+}

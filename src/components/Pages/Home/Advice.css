@@ -1,0 +1,35 @@
+.text-answer {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    line-height: 2rem;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  .text-answer-title {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    line-height: 3.2rem;
+    font-size: 3.2rem;
+
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

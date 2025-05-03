@@ -1,0 +1,209 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  color: #f9f9f9;
+  background-image: url('./imgs/home-background.jpg');
+  background-size: cover; /* Cambiado a cover para cubrir todo */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  text-align: center;
+  transition: background-position 0.2s ease;
+  filter: blur(0.1px);
+  animation: scrollBackground 20s linear infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* Ahora el planeta como capa adicional */
+/* PLANETA (fijo, rotación lenta) */
+body::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translateY(-50%);
+  width: 300vh;
+  height: 250vh;
+  background-image: url('./imgs/planet.png');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  z-index: -1;
+  animation: spinPlanet 800s linear infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1rem rgb(255, 255, 255));
+}
+
+@media (max-width: 768px) {
+  body::before {
+    width: 200vw;
+    height: 200vw;
+    background-size: 80%;
+    left: -50%;                /* centrado horizontal */
+    top: 120%;                /* alineado al fondo */
+    transform: translate(-50%, -100%); /* centrado en X, alineado abajo */
+  }
+}
+
+
+
+@keyframes spinPlanet {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* COMETA (móvil) */
+body::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  width: 50rem;
+  height: 50rem;
+  background-image: url('./imgs/comet.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+  animation: moveComet 120s ease-in-out infinite; /* más lento */
+  pointer-events: none;
+  filter: drop-shadow(0 0 3rem rgb(92, 80, 80));
+}
+
+@keyframes moveComet {
+  0% {
+    transform: translateX(0) translateY(-50%) rotate(0deg) scale(5);
+  }
+  10% {
+    transform: translateX(14vw) translateY(-50%) rotate(36deg) scale(3);
+  }
+  20% {
+    transform: translateX(28vw) translateY(-50%) rotate(72deg) scale(2);
+  }
+  30% {
+    transform: translateX(42vw) translateY(-50%) rotate(108deg) scale(3);
+  }
+  40% {
+    transform: translateX(56vw) translateY(-50%) rotate(144deg) scale(5);
+  }
+  50% {
+    transform: translateX(70vw) translateY(-50%) rotate(180deg) scale(5);
+  }
+  60% {
+    transform: translateX(84vw) translateY(-50%) rotate(216deg) scale(4);
+  }
+  70% {
+    transform: translateX(98vw) translateY(-50%) rotate(252deg) scale(3);
+  }
+  80% {
+    transform: translateX(112vw) translateY(-50%) rotate(288deg) scale(2);
+  }
+  90% {
+    transform: translateX(126vw) translateY(-50%) rotate(324deg) scale(4);
+  }
+  100% {
+    transform: translateX(140vw) translateY(-50%) rotate(360deg) scale(1);
+  }
+}
+
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 20 20%;
+  }
+  0% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 20% 20%;
+  }
+}
+
+
+
+a {
+  font-weight: 500;
+  color: #cacbe6;
+  text-decoration: inherit;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+
+}
+
+h1 {
+  position: relative;
+  font-size: 4.2em;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.7) 100%, /* ¡Más brillante! */
+    rgba(200, 255, 255, 0.3) 80%,
+    rgba(200, 255, 255, 0) 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  overflow: hidden;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Leve brillo alrededor */
+}
+
+/* Ruido animado */
+
+
+
+.basic-button {
+  padding: 0.3em 1.2em;
+  font-size: 0,5rem;
+  font-weight: 500;
+  font-family: inherit;
+  transition: border-color 0.25s;
+  background-color: transparent;
+  border-radius: 5rem;
+  border-color: #ececf1;
+  color: #f9f9f9;
+  margin: 1rem 0;
+  
+
+}
+button:hover {
+  border-color: #e7e7e7;
+  filter: brightness(1.1) drop-shadow(0 0 5px white);
+  transition: filter 0.3s ease;
+}
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
