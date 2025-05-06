@@ -1,5 +1,6 @@
-import React from "react";
-import "./common.css";
+import {  useRef } from "react";import "./common.css";
+
+
 const Answer = ({
   contador1,
   setContador1,
@@ -24,20 +25,44 @@ const Answer = ({
     console.log(`PREGUNTA N`, contadorQuestion);
   }
 
+  const audioRef = useRef(null);
+
+  const handleHover = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch((err) => {
+        console.log("Error reproduciendo sonido:", err);
+      });
+    }
+  };
+
   return (
     <div className="answer-container">
+      <audio ref={audioRef} src="src\music\hover.mp3" />
       <div className="child">
-        <button className="button-answer" onClick={contadorSuma}>
+        <button
+          className="button-answer"
+          onMouseEnter={handleHover}
+          onClick={contadorSuma}
+        >
           Sí
         </button>
       </div>
       <div className="child">
-        <button className="button-answer" onClick={contadorResta}>
+        <button
+          className="button-answer"
+          onMouseEnter={handleHover}
+          onClick={contadorResta}
+        >
           No
         </button>
       </div>
       <div className="child">
-        <button className="button-answer" onClick={contadorActualiza}>
+        <button
+          className="button-answer"
+          onMouseEnter={handleHover}
+          onClick={contadorActualiza}
+        >
           No sé
         </button>
       </div>

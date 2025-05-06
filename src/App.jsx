@@ -1,21 +1,37 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import Home from "./components/Pages/Home/Home"
-import About from "./components/common/About"
-import Navbar from "./components/Pages/Layout/navbar/Navbar"
-import Question1 from "./components/Pages/Home/Question1"
-import Category from "./components/Pages/Home/Category"
-import CounterContextComponent from "./context/CounterContext"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Pages/Home/Home";
+import About from "./components/common/About";
+import Navbar from "./components/Pages/Layout/navbar/Navbar";
+import Question1 from "./components/Pages/Home/Question1";
+import Category from "./components/Pages/Home/Category";
+import CounterContextComponent from "./context/CounterContext";
 import Reviews from './components/Pages/Home/Reviews.jsx';
-import ObtainUserName from "./components/common/ObtainUserName.jsx"
+import ObtainUserName from "./components/common/ObtainUserName.jsx";
 import './App.css';
-import UploadTrigger from "./components/UploaderTrigger.jsx"
-UploadTrigger
+import UploadTrigger from "./components/UploaderTrigger.jsx";
+import { useEffect, useRef } from "react";
+
 function App() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      const playAudio = () => {
+        audioRef.current.play().catch((error) => {
+          console.log("Autoplay bloqueado por el navegador:", error);
+        });
+      };
+      playAudio();
+    }
+  }, []);
+
   return (
     <BrowserRouter>
       <CounterContextComponent>
+ 
+        <audio ref={audioRef} src="src\music\BG-SOUND.mp3" loop />
+
         {/* <UploadTrigger /> montar para cargar colecciones */}
-  
         <Routes>
           <Route element={<Navbar />}>
             <Route path="/" element={<Home />} />
@@ -29,7 +45,6 @@ function App() {
       </CounterContextComponent>
     </BrowserRouter>
   );
-  
 }
 
-export default App
+export default App;
