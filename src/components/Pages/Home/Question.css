@@ -4,7 +4,7 @@
   }
   
   .left-side, .right-side {
-    flex: 1; /* Cada lado ocupa 50% */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,7 @@
   
   .left-side h1 {
     text-align: left;
-    padding: 0 7rem;
-    line-height: 1; /* Reduce el interlineado */
+    padding: 0rem 1rem 0rem 5rem;     line-height: 1;
   }
   
 
@@ -49,7 +48,7 @@
   @media (max-width: 768px) {
     .screen-container {
       flex-direction: column;
-      height: auto; /* Permitimos que crezca según el contenido */
+      height: auto; 
     }
   
     .left-side, .right-side {
@@ -67,8 +66,8 @@
 height: auto;    }
   
     .right-side h2 {
-      font-size: 1.5rem; /* Reducimos tamaño del subtítulo */
-      margin-top: 1rem; /* Menor margen superior */
+      font-size: 1.5rem; 
+      margin-top: 1rem; 
     }
   }
   

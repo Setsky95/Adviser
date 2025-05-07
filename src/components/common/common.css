@@ -10,8 +10,8 @@
   @media (max-width: 770px) {
     .answer-container {
       flex-direction: row;
-      align-items: center; /* CENTRA EN EJE X */
-      height: 20vh; /* toda la pantalla */
+      align-items: center; 
+      height: 20vh; 
 
     }
   }
@@ -22,8 +22,8 @@
     }
   }
   .answer-container a {
-    display: block; /* hace que cada Link ocupe todo el ancho que necesita */
-    width: 100%; /* opcional: si querés que ocupen todo el ancho disponible */
+    display: block;
+    width: 100%; 
     text-align: center;
   }
   .button-answer {

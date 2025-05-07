@@ -24,10 +24,10 @@ const Category = () => {
   };
 
   const categories = [
-    { categoryName: "work", categoryIcon: workIcon, label: "Trabajo", position: "card-top" },
-    { categoryName: "family", categoryIcon: familyIcon, label: "Familia", position: "card-left" },
-    { categoryName: "love", categoryIcon: loveIcon, label: "Amor", position: "card-right" },
-    { categoryName: "friends", categoryIcon: friendsIcon, label: "Amistad", position: "card-bottom" },
+    { categoryName: "work", categoryIcon: workIcon, label: "Trabajo" },
+    { categoryName: "family", categoryIcon: familyIcon, label: "Familia" },
+    { categoryName: "love", categoryIcon: loveIcon, label: "Amor" },
+    { categoryName: "friends", categoryIcon: friendsIcon, label: "Amistad" },
   ];
 
   return (
@@ -36,7 +36,7 @@ const Category = () => {
       {categories.map((cat) => (
         <div
           key={cat.categoryName}
-          className={`category-card ${cat.position}`}
+          className={`category-card`}
           onMouseEnter={handleHover}
           onClick={() => {
             setCategory(cat.categoryName);

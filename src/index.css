@@ -78,13 +78,13 @@ body::after {
   left: -30%;
   width: 50rem;
   height: 50rem;
-  background-image: url('./imgs/comet.jpg');
+  background-image: url('./imgs/comet.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.1;
+  opacity: 0.2;
   z-index: -1;
-  animation: moveComet 120s ease-in-out infinite; /* más lento */
+  animation: moveComet 400s ease-in-out infinite; /* más lento */
   pointer-events: none;
   filter: drop-shadow(0 0 3rem rgb(92, 80, 80));
 }

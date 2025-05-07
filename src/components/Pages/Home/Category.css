@@ -16,7 +16,7 @@
   font-family: sans-serif;
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
-  flex: 1 1 calc(25% - 2rem); /* por defecto, 4 por fila si hay espacio */
+  flex: 1 1 calc(25% - 2rem); 
   opacity: 0;
   transform: translateY(5rem);
   animation: slideInFromBottom 1.6s ease-out forwards;
@@ -25,7 +25,7 @@
 @media (max-width: 600px) {
   .category-card {
     flex: 1 1 calc(50% - 2rem);
-    width: 4rem; /* en mobile, 2 por fila */
+    width: 4rem; 
   }
 }
 
@@ -40,45 +40,48 @@
 .category-card:hover img {
   filter: brightness(1.1) drop-shadow(0 0 5px white);
   transition: filter 0.3s ease;
-  animation: heartbeat 6s infinite;
+  animation: heartbeat-rotate 6s infinite;
 }
 
-@keyframes heartbeat {
+@keyframes heartbeat-rotate {
   0% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
   30% {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(5deg);
   }
   50% {
-    transform: scale(1.076);
+    transform: scale(1.076) rotate(2deg);
   }
   70% {
-    transform: scale(1.15);
+    transform: scale(1.15) rotate(5deg);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
   }
 }
 
 .category-card img {
-  width: 4.125rem;     /* 50px */
+  width: 4.125rem;     
   height: 4.125rem;
 }
 
-/* Animación en cascada */
-.category-card:nth-child(1) {
+
+
+
+.category-card:nth-child(2) {
   animation-delay: 0.1s;
 }
-.category-card:nth-child(2) {
-  animation-delay: 0.7s;
-}
 .category-card:nth-child(3) {
-  animation-delay: 1.3s;
+  animation-delay: 0.3s;
 }
 .category-card:nth-child(4) {
-  animation-delay: 1.9s;
+  animation-delay: 0.6s;
 }
+.category-card:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
 
 @keyframes slideInFromBottom {
   to {
@@ -88,7 +91,7 @@
 }
 
 .category-title {
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem; 
   margin-top: 1rem;
 }
 

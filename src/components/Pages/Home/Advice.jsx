@@ -21,9 +21,6 @@ useEffect(() => {
     const randomIndex = Math.floor(Math.random() * Math.min(5, docs.length));
     const selectedAdvice = docs[randomIndex].data();
     setAdvice(selectedAdvice);
-    console.log(`coleccion:`,collectionName);
-    console.log(`categoria:`,category);
-    console.log(`advice:`,advice.adviceTitle);
 
 
   };
