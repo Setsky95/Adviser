@@ -5,11 +5,13 @@ import 'ldrs/react/JellyTriangle.css'
 
 const Loader = () => {
   return (
+  <div className="loader">
 <JellyTriangle
   size="100"
   speed="1.75"
   color="white" 
-/>  );
+  
+/>  </div>);
 };
 
 export default Loader;

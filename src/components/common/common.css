@@ -167,3 +167,8 @@ width: 25rem;
 .web-loader.fade-out {
   opacity: 0;
 }
+
+.loader {
+ opacity: 65%;
+
+}
