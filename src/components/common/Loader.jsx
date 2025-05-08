@@ -5,7 +5,7 @@ import 'ldrs/react/JellyTriangle.css'
 
 const Loader = () => {
   return (
-  <div className="loader">
+  <div className="loader-container">
 <JellyTriangle
   size="100"
   speed="1.75"

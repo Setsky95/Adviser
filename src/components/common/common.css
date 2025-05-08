@@ -168,7 +168,7 @@ width: 25rem;
   opacity: 0;
 }
 
-.loader {
+.loader-container {
  opacity: 65%;
 
 }
