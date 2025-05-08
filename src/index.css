@@ -25,10 +25,13 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    animation-duration: 50s;
+  }
+}
 
 
-/* Ahora el planeta como capa adicional */
-/* PLANETA (fijo, rotación lenta) */
 body::before {
   content: "";
   position: absolute;
@@ -53,9 +56,11 @@ body::before {
     width: 200vw;
     height: 200vw;
     background-size: 80%;
-    left: -50%;                /* centrado horizontal */
-    top: 120%;                /* alineado al fondo */
-    transform: translate(-50%, -100%); /* centrado en X, alineado abajo */
+    left: -50%;               
+    top: 120%;               
+    transform: translate(-50%, -100%); 
+    animation-duration: 250s;
+
   }
 }
 
@@ -70,7 +75,7 @@ body::before {
   }
 }
 
-/* COMETA (móvil) */
+
 body::after {
   content: "";
   position: absolute;
@@ -82,9 +87,9 @@ body::after {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: -1;
-  animation: moveComet 400s ease-in-out infinite; /* más lento */
+  animation: moveComet 400s ease-in-out infinite;
   pointer-events: none;
   filter: drop-shadow(0 0 3rem rgb(92, 80, 80));
 }

@@ -9,27 +9,20 @@ import Reviews from './components/Pages/Home/Reviews.jsx';
 import ObtainUserName from "./components/common/ObtainUserName.jsx";
 import './App.css';
 import UploadTrigger from "./components/UploaderTrigger.jsx";
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
+import WebLoader from "./components/common/WebLoader";
 
 function App() {
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      const playAudio = () => {
-        audioRef.current.play().catch((error) => {
-          console.log("Autoplay bloqueado por el navegador:", error);
-        });
-      };
-      playAudio();
-    }
-  }, []);
+  
 
   return (
     <BrowserRouter>
       <CounterContextComponent>
- 
-        <audio ref={audioRef} src="src\music\BG-SOUND.mp3" loop />
+      <WebLoader />
+
+       
 
         {/* <UploadTrigger /> montar para cargar colecciones */}
         <Routes>

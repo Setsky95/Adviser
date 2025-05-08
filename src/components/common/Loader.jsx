@@ -1,10 +1,17 @@
 // src/components/common/Loader.jsx
-import './common.css'; // Asegurate de tener el CSS a mano
+import './common.css'; 
+import { JellyTriangle } from 'ldrs/react'
+import 'ldrs/react/JellyTriangle.css'
 
 const Loader = () => {
   return (
-    <div className="loader"></div>
-  );
+<JellyTriangle
+  size="100"
+  speed="1.75"
+  color="white" 
+/>  );
 };
 
 export default Loader;
+
+
