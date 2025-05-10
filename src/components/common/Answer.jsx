@@ -10,19 +10,16 @@ const Answer = ({
   function contadorSuma() {
     setContador1(contador1 + 10);
     setcontadorQuestion(contadorQuestion + 1);
-    console.log(`PREGUNTA N`, contadorQuestion);
   }
 
   function contadorResta() {
     setContador1(contador1 - 10);
     setcontadorQuestion(contadorQuestion + 1);
-    console.log(`PREGUNTA N`, contadorQuestion);
   }
 
   function contadorActualiza() {
     setContador1(contador1 + 1);
     setcontadorQuestion(contadorQuestion + 1);
-    console.log(`PREGUNTA N`, contadorQuestion);
   }
 
   const audioRef = useRef(null);

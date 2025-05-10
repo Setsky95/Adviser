@@ -1,0 +1,6 @@
+body.iphone-mode {
+  animation: none !important;
+  background-attachment: scroll !important;
+  filter: none !important;
+  overflow: auto !important;
+}

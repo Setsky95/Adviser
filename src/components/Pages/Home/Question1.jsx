@@ -37,12 +37,8 @@ const Question1 = () => {
     });
   }, [category, contadorQuestion]);
 
-  console.log(`Categoría`, category);
-  console.log(`Id de la pregunta`, randomID);
-  console.log(`pregunta`, question);
 
 
-  // Ahora no hace falta hacer navigate acá en el render
 
   return contadorQuestion > 5 ? (
     <Advice contador1={contador1} category={category}/>

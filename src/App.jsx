@@ -11,6 +11,8 @@ import './App.css';
 import UploadTrigger from "./components/UploaderTrigger.jsx";
 import {  useRef } from "react";
 import WebLoader from "./components/common/WebLoader";
+import IphoneGuard from "./components/common/IhponeGuard.jsx";
+
 
 function App() {
   const audioRef = useRef(null);
@@ -20,6 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <CounterContextComponent>
+            <IphoneGuard />
       <WebLoader />
 
        

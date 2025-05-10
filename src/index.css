@@ -12,7 +12,7 @@ body {
   width: 100%;
   min-height: 100vh;
   color: #f9f9f9;
-  background-image: url('./imgs/home-background.jpg');
+  background-image: url('./imgs/home-background.webp');
   background-size: cover; /* Cambiado a cover para cubrir todo */
   background-repeat: no-repeat;
   background-position: center center;
@@ -83,7 +83,7 @@ body::after {
   left: -30%;
   width: 50rem;
   height: 50rem;
-  background-image: url('./imgs/comet.png');
+  background-image: url('./imgs/comet.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

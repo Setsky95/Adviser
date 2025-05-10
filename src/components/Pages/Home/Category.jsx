@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { CounterContext } from "../../../context/CounterContext";
 import "./Category.css";
 
-import familyIcon from "../../../imgs/family-icon.png";
-import workIcon from "../../../imgs/work-icon.png";
-import loveIcon from "../../../imgs/love-icon.png";
-import friendsIcon from "../../../imgs/friends-icon.png";
+import familyIcon from "../../../imgs/family-icon.svg";
+import workIcon from "../../../imgs/work-icon.svg";
+import loveIcon from "../../../imgs/love-icon.svg";
+import friendsIcon from "../../../imgs/friends-icon.svg";
 
 const Category = () => {
   const { setCategory } = useContext(CounterContext);
