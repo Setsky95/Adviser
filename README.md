@@ -37,7 +37,7 @@ In essence, **the app assesses the user's emotional state in a given category** 
 
 🛸 **WORK IN PROGRESS** – constant improvements ahead!
 
-![App Design](./public/design.png)
+![App Design](./design.png)
 
 ---
 
@@ -80,4 +80,4 @@ Simplificadamente, **la app mide el estado anímico o nivel de positivismo del u
 
 🛸 **PROYECTO EN DESARROLLO** – mejoras en camino
 
-![Diseño de la app](./public/design.png)
+![Diseño de la app](./design.png)
