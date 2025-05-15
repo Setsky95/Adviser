@@ -5,7 +5,7 @@ const WebLoader = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Arranca el fade después de 1 segundo
+  
     const timer = setTimeout(() => {
       setFadeOut(true);
     }, 1000);
