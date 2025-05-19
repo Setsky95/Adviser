@@ -21,7 +21,8 @@
   
   .left-side h1 {
     text-align: left;
-    padding: 0rem 1rem 0rem 5rem;     line-height: 1;
+    padding: 0rem 1rem 0rem 5rem;  line-height: 1;
+    margin: 0 0 0 5rem;
   }
   
 
@@ -52,14 +53,15 @@
     }
   
     .left-side, .right-side {
-      width: 100%; /* Ocupan todo el ancho */
-      padding: 1rem; /* Añadimos algo de espacio interno */
+      width: 100%; 
+      padding: 1rem; 
     }
   
     .left-side h1 {
-      text-align: center; /* Centramos el título en mobile */
-      padding: 5rem 1rem 0rem 1rem; /* Reducimos el padding lateral */
-      font-size: 2rem; /* Ajustamos tamaño si es necesario */
+      text-align: center; 
+      padding: 5rem 1rem 0rem 1rem; 
+      font-size: 2rem; 
+margin: 0 0 0 0rem;
     }
   
     .right-side {
