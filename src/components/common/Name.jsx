@@ -13,6 +13,7 @@ const Name = () => {
   return (
     <div >
       <div >
+        <h1></h1>
         <h1 className='nombre-Name' >{userName}</h1>
         <h2>¿Qué te preocupa?</h2>
       </div>

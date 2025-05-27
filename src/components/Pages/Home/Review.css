@@ -10,13 +10,13 @@
   border: 1px solid white;
   border-radius: 4px;
   font-size: 14px;
-  resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical; 
 }
 
 .reviewButtons {
   display: flex;
   justify-content: center;
-  gap: 0.5rem; /* Espacio entre botones */
+  gap: 0.5rem; 
 }
 
 .text-review::placeholder {
@@ -31,10 +31,10 @@
 
 .comment-area {
   min-height: 50px;
-  resize: vertical; /* Permite redimensionar verticalmente */
+  resize: vertical; 
 }
 
-/* Tablet (≤ 768px) */
+
 @media (max-width: 768px) {
   .text-review {
     max-width: 90%;
@@ -46,7 +46,7 @@
   }
 }
 
-/* Mobile (≤ 500px) */
+
 @media (max-width: 500px) {
   .text-review {
     width: 17rem;
